@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link rel="icon" href="./img/p21.svg">
+    <style>
+        body {
+            background-color: rgb(241, 234, 255);
+            position: relative;
+            font-family: "Gabarito", sans-serif;
+            color: black;
+        }
+
+        .signup-container {
+            background-color: white;
+            position: absolute;
+            top: 100px;
+            left: 530px;
+            height: 450px;
+            width: 400px;
+            border-radius: 20px;
+            padding: 50px;
+        }
+
+        .signup {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .google-bar {
+            display: flex;
+            padding: 0 30px;
+            border-style: solid;
+            border-radius: 30px;
+            border-width: 2px;
+            align-items: center;
+            gap: 70px;
+            font-size: 15px;
+            margin-top: 20px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .mail-bar {
+            display: flex;
+            padding: 0 30px;
+            border-style: solid ;
+            border-radius: 30px;
+            border-width: 2px;
+            align-items: center;
+            gap: 70px;
+            font-size: 15px;
+            margin-top: 20px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .google-bar:hover,
+        .mail-bar:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .one {
+            font-size: 12px;
+            margin-top: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup">
+            <img src="./img/p21.svg" alt="#" height="40px" width="40px">
+            <h1>Sign in to unlock <br>the best of Tripadvisor</h1>
+            <div class="google-bar">
+                <img src="./img/google.png" alt="#" width="20px" height="20px">
+                <h4>Continue with Google</h4>
+            </div>
+            <div class="mail-bar">
+                <img src="./img/email.png" alt="#" width="20px" height="20px">
+                <h4>Continue with email</h4>
+            </div>
+            <div class="one">By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and
+                Cookie Statement.</div>
+        </div>
+    </div>
+</body>
+
+</html

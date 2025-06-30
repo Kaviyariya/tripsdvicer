@@ -95,75 +95,49 @@ body {
     background-color: rgb(230, 229, 229);
     border-radius: 20px;
 }
-/* Hide radio buttons */
-input[type="radio"] {
-    display: none;
-}
-
-/* Headings */
-h1 {
-    font-size: 42px;
-    margin-top: 40px;
+.Where {
+    justify-content: center;
+    height: fit-content;
+    padding: 30px;
+    font-size: 30px;
     text-align: center;
 }
 
-.heading {
-    display: none;
-}
-
-/* Menu Style */
-.menu {
+.options {
     display: flex;
-    gap: 30px;
-    margin: 40px 350px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    margin-top: 32px 0px 14px;
 }
 
-.menu label {
-    cursor: pointer;
-    font-size: 18px;
+.option-home {
     display: flex;
     align-items: center;
+    padding: 12px;
     gap: 5px;
     position: relative;
-    padding-bottom: 5px;
+    cursor: pointer;
 }
 
-/* Hover underline animation */
-.menu label::after {
+.option-home::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -5px;
     width: 100%;
     height: 2px;
+    left: 0;
     background-color: black;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
     transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
-}
-/* .menu label:hover::after {
-    transform: scaleX(1);
-} */
 
-/* Active (clicked) underline - keep underline on selected label */
-#all:checked~.menu label[for="all"]::after,
-#hotels:checked~.menu label[for="hotels"]::after,
-#things:checked~.menu label[for="things"]::after,
-#restaurants:checked~.menu label[for="restaurants"]::after,
-#flights:checked~.menu label[for="flights"]::after,
-#homes:checked~.menu label[for="homes"]::after {
-    transform: scaleX(1);
 }
 
-/* Show the heading based on selection */
-#all:checked~.content #heading-all,
-#hotels:checked~.content #heading-hotels,
-#things:checked~.content #heading-things,
-#restaurants:checked~.content #heading-restaurants,
-#flights:checked~.content #heading-flights,
-#homes:checked~.content #heading-homes {
-    display: block;
-}
+.option-home:hover::after {
+    transform: scaleX(1);
+} 
 
 .search-bar {
     display: flex;

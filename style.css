@@ -95,50 +95,74 @@ body {
     background-color: rgb(230, 229, 229);
     border-radius: 20px;
 }
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
 
-
-.Where {
-    justify-content: center;
-    height: fit-content;
-    padding: 30px;
-    font-size: 30px;
+/* Headings */
+h1 {
+    font-size: 42px;
+    margin-top: 40px;
     text-align: center;
 }
 
-.options {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-weight: bold;
-    margin-top: 32px 0px 14px;
+.heading {
+    display: none;
 }
 
-.option-home {
+/* Menu Style */
+.menu {
+    display: flex;
+    gap: 30px;
+    margin: 40px 350px;
+}
+
+.menu label {
+    cursor: pointer;
+    font-size: 18px;
     display: flex;
     align-items: center;
-    padding: 12px;
     gap: 5px;
     position: relative;
-    cursor: pointer;
+    padding-bottom: 5px;
 }
 
-.option-home::after {
+/* Hover underline animation */
+.menu label::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 2px;
-    left: 0;
     background-color: black;
-    transition: 0.3s;
-    transition-timing-function: ease-in-out;
     transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+/* .menu label:hover::after {
+    transform: scaleX(1);
+} */
 
+/* Active (clicked) underline - keep underline on selected label */
+#all:checked~.menu label[for="all"]::after,
+#hotels:checked~.menu label[for="hotels"]::after,
+#things:checked~.menu label[for="things"]::after,
+#restaurants:checked~.menu label[for="restaurants"]::after,
+#flights:checked~.menu label[for="flights"]::after,
+#homes:checked~.menu label[for="homes"]::after {
+    transform: scaleX(1);
 }
 
-.option-home:hover::after {
-    transform: scaleX(1);
+/* Show the heading based on selection */
+#all:checked~.content #heading-all,
+#hotels:checked~.content #heading-hotels,
+#things:checked~.content #heading-things,
+#restaurants:checked~.content #heading-restaurants,
+#flights:checked~.content #heading-flights,
+#homes:checked~.content #heading-homes {
+    display: block;
 }
 
 .search-bar {

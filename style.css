@@ -313,11 +313,9 @@ body {
     right: 15px;
     top: 10px;
 }
-
 .like:hover {
     background-color: rgb(255, 201, 243);
 }
-
 .Inspiration {
     display: flex;
     background-color: rgb(234, 232, 232);

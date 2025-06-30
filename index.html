@@ -43,38 +43,33 @@
             </div>
         </div>
     </div>
-    <!--Where to-->
-    <div class="Where">
-        <h1>Where to?</h1>
-    </div>
-    <!--Options hotel-->
-    <div class="options">
-        <div class="option-home">
-            <img src="./img/home-icon.png" alt="home-icon" height="16px" width="16px">
-            <p>Search All</p>
-        </div>
-        <div class="option-home">
-            <i class="fa-solid fa-bed" style="color: #000000;"></i>
-            <p>Hotels</p>
-        </div>
-        <div class="option-home">
-            <i class="fa-solid fa-camera" style="color: #000000;"></i>
-            <p>Things to Do</p>
-        </div>
-        <div class="option-home">
-            <i class="fa-solid fa-utensils" style="color: #000000;"></i>
-            <p>Restaurants</p>
-        </div>
-        <div class="option-home">
-            <i class="fa-solid fa-jet-fighter" style="color: #000000;"></i>
-            <p>Flights</p>
-        </div>
-        <div class="option-home">
-            <i class="fa-solid fa-house" style="color: #000000;"></i>
-            <p>Holiday Homes</p>
-        </div>
+   <!-- Radio Buttons -->
+    <input type="radio" name="menu" id="all" checked>
+    <input type="radio" name="menu" id="hotels">
+    <input type="radio" name="menu" id="things">
+    <input type="radio" name="menu" id="restaurants">
+    <input type="radio" name="menu" id="flights">
+    <input type="radio" name="menu" id="homes">
+
+    <!-- Dynamic Heading -->
+    <div class="content">
+        <h1 id="heading-all" class="heading">Where to?</h1>
+        <h1 id="heading-hotels" class="heading">Stay somewhere great</h1>
+        <h1 id="heading-things" class="heading">Explore amazing experiences</h1>
+        <h1 id="heading-restaurants" class="heading">Find the best restaurants</h1>
+        <h1 id="heading-flights" class="heading">Search flights worldwide</h1>
+        <h1 id="heading-homes" class="heading">Discover beautiful holiday homes</h1>
     </div>
 
+    <!-- Menu -->
+    <div class="menu">
+        <label for="all"><span><img src="./img/home-icon.png" alt="home-icon" height="16px" width="16px"></span>Search All</label>
+        <label for="hotels"><span><i class="fa-solid fa-bed" style="color: #000000;"></i></span>Hotels</label>
+        <label for="things"><span><i class="fa-solid fa-camera" style="color: #000000;"></i></span>Things to Do</label>
+        <label for="restaurants"><span><i class="fa-solid fa-utensils" style="color: #000000;"></i></span>Restaurants</label>
+        <label for="flights"><span><i class="fa-solid fa-jet-fighter" style="color: #000000;"></i></span>Flights</label>
+        <label for="homes"><span><i class="fa-solid fa-house" style="color: #000000;"></i></span>Holiday Homes</label>
+    </div>
     <!--Search bar-->
     <div class="search-bar">
         <div class="search-space"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
